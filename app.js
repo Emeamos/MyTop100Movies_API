@@ -1,10 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-
+import dbConnect from "./config/dbConnect.js";
 import bodyparser from "body-parser";
 import cors from "cors";
 dotenv.config({path:'./.env'});
 
+dbConnect();
 const app = express();
 
 app.use(express.json());
