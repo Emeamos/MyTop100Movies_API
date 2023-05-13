@@ -33,3 +33,20 @@ export const savePopularMovies = async () => {
       }
     }
   };
+export const createMovie = async (req, res) => {
+    const { title, release_date, poster_path, overview, rating } = req.body;
+    const movie = new Movie({
+      title,
+      release_date,
+      poster_path,
+      overview,
+      rating,
+    });
+    try {
+      const savedMovie = await movie.save();
+      res.json(savedMovie);
+    } catch (error) {
+      console.log(error);
+      res.status(500).send('Server error');
+    }
+  };
