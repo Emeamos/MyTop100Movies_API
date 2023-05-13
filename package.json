@@ -4,9 +4,13 @@
   "description": "",
   "main": "app.js",
   "type": "module",
+  "engines": {
+    "node": "18.16.0"
+  },
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,6 +31,7 @@
     "mongoose": "^7.1.1"
   },
   "devDependencies": {
+    "jest": "^29.5.0",
     "nodemon": "^2.0.22"
   }
 }
