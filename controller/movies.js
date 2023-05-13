@@ -97,3 +97,12 @@ export const deleteMovie = async (req, res) => {
       res.status(500).send('Server error');
     }
   };
+  export const listMovies = async (req, res) => {
+    try {
+      const movies = await Movie.find();
+      res.json(movies);
+    } catch (error) {
+      console.log(error);
+      res.status(500).send('Server error');
+    }
+  };
