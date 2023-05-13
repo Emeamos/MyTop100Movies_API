@@ -106,3 +106,14 @@ export const deleteMovie = async (req, res) => {
       res.status(500).send('Server error');
     }
   };
+  export const syncMovies = async (req, res) => {
+    try {
+      const movies = await savePopularMovies();
+      await Movie.deleteMany();
+      await Movie.insertMany(movies);
+      res.json({ msg: 'Movies synced' });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send('Server error');
+    }
+  };
