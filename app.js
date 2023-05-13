@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import dbConnect from "./config/dbConnect.js";
 import bodyparser from "body-parser";
 import cors from "cors";
+import movieRouter from "./routes/movies.js";
 dotenv.config({path:'./.env'});
 
 dbConnect();
@@ -10,6 +11,9 @@ const app = express();
 
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended : true}))
+
+app.use("/api/v1/movies", movieRouter)
+
 
 app.use(cors({credentials: true, origin: 'http://127.0.0.1:7007'}));
 
