@@ -8,4 +8,6 @@ movieRouter.post("/", createMovie);
 movieRouter.get("/:id", getMovieById);
 movieRouter.put("/:id", updateMovie);
 movieRouter.delete("/:id", deleteMovie);
-movieRouter.post("/sync", syncMovies)
+movieRouter.post("/sync", syncMovies);
+
+export default movieRouter;
