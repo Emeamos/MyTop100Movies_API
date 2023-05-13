@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Movie from '../model/movies';
+import Movie from '../model/movies.js';
 
 const baseURL = 'https://api.themoviedb.org/3/';
 const apiKey = process.env.TMDB_API_KEY;
