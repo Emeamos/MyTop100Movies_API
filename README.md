@@ -22,12 +22,12 @@ The following endpoints are available on the API:
 - `DELETE /movies/:id`: Delete a movie by ID.
 
 ## Documentation
-The Project is well documented on Postman. The Publication link is blog post documentation on postman link. [Click the link to view the documentation]('https://documenter.getpostman.com/view/24145860/2s93kxbkzY').
+The Project is well documented on Postman. The Publication link is blog post documentation on postman link. [Click the link to view the documentation](https://documenter.getpostman.com/view/24145860/2s93kxbkzY).
 
 Swagger UI documentation at: 'http://localhost:7007/api-doc'
 
 ## Deployment
-The Project live deployment is [blog post deployment link on render]('https://mytop100movies-api.onrender.com'). Click and use the documentation to know the routes for easy navigation.
+The Project live deployment is [blog post deployment link on render](https://mytop100movies-api.onrender.com). Click and use the documentation to know the routes for easy navigation.
 
 ## Contributors
 
