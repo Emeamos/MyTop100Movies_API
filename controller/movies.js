@@ -50,20 +50,23 @@ export const createMovie = async (req, res) => {
       res.status(500).send('Server error');
     }
   };
-export const deleteMovie = async (req, res) => {
+  export const deleteMovie = async (req, res) => {
     const { id } = req.params;
+  
     try {
-      let movie = await Movie.findById(id);
+      const movie = await Movie.findByIdAndRemove(id);
+  
       if (!movie) {
         return res.status(404).json({ msg: 'Movie not found' });
       }
-      await movie.remove();
+  
       res.json({ msg: 'Movie removed' });
     } catch (error) {
       console.log(error);
       res.status(500).send('Server error');
     }
   };
+  
   export const updateMovie = async (req, res) => {
     const { id } = req.params;
     const { title, release_date, poster_path, overview, rating } = req.body;
