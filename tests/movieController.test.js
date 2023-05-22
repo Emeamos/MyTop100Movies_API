@@ -12,7 +12,7 @@ const movieData = {
 };
 
 beforeAll(async () => {
-  // Connect to the database
+  // Connect to the databaseee
   await connectDatabase();
 
   // Clear the movie collection before running the tests
