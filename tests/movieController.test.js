@@ -6,7 +6,7 @@ import Movie from '../model/movies.js';
 const movieData = {
   title: 'Inception',
   overview: "Great movie",
-  release_date: 20-01-2010,
+  release_date: "01-20-2010",
   poster_path: "/picture.jpeg",
   vote_average: 9
 };
@@ -68,7 +68,7 @@ describe('CRUD Operations', () => {
     const updatedData = {
         title: 'Baby driver',
         overview: "Great movie",
-        release_date: 20-01-2010,
+        release_date: "02-19-2010",
         poster_path: "/picture.jpeg",
         vote_average: 9
     };
