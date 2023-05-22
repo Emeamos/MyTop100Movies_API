@@ -1,6 +1,8 @@
-import request from 'supertest';
-import app from '../app.js'
-import Movie from '../model/movies.js';
+const request = require('supertest');
+// import app from '../app.js'
+// import Movie from '../model/movies.js';
+const app = require('../app.js');
+const Movie = require('../model/movies.js');
 
 // Mocked movie data
 const movieData = {

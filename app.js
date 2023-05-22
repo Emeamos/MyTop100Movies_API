@@ -4,8 +4,6 @@ import dbConnect from "./config/dbConnect.js";
 import bodyparser from "body-parser";
 import cors from "cors";
 import movieRouter from "./routes/movies.js";
-import swaggerUiExpress from "swagger-ui-express";
-import options from "./swagger.js";
 dotenv.config({path:'./.env'});
 
 dbConnect();
@@ -14,8 +12,6 @@ const app = express();
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended : true}))
 
-// Initialize Swagger UI
-app.use('/api-docs', swaggerUiExpress.serve, swaggerUiExpress.setup(options));
 
 app.use("/api/v1/movies", movieRouter)
 
